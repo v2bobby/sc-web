@@ -6,7 +6,6 @@
     <meta name="description" content="SabajCore — Next-Generation PropTech Infrastructure for Nigeria. Blockchain land titles, GIS intelligence, and automated property management.">
     <meta property="og:title" content="SabajCore | The Core of Nigerian Real Estate">
     <meta property="og:description" content="Instant title verification. GIS-powered decisions. Automated property flows.">
-    <meta property="og:image" content="https://sabajcore.xyz/og-image.jpg">
 
     <title>SabajCore | PropTech Infrastructure</title>
     
@@ -46,9 +45,16 @@
         .neon-button:hover {
             box-shadow: 0 15px 40px -10px rgb(103 232 249);
         }
+
+        /* Ensure full scroll on mobile */
+        html, body {
+            height: auto;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
     </style>
 </head>
-<body class="tailwind-ready bg-slate-950 text-white overflow-x-hidden">
+<body class="tailwind-ready bg-slate-950 text-white">
 
     <!-- NAVBAR -->
     <nav class="bg-slate-950/95 backdrop-blur-2xl border-b border-slate-700 sticky top-0 z-50">
@@ -123,7 +129,7 @@
     </header>
 
     <!-- VISION -->
-    <section id="vision" class="max-w-screen-2xl mx-auto px-6 py-28">
+    <section id="vision" class="max-w-screen-2xl mx-auto px-6 py-28 bg-slate-950">
         <div class="grid md:grid-cols-12 gap-20 items-center">
             <div class="md:col-span-5">
                 <h2 class="heading-font text-5xl font-semibold tracking-[-1.5px] leading-tight">SabajCore is the technological core of the Nigerian real estate and property development sector.</h2>
@@ -162,21 +168,48 @@
         </div>
     </section>
 
-    <!-- TECHNOLOGY, ROADMAP, FOUNDER sections follow the same refined style (full code is long — this is the core). -->
+    <!-- ROADMAP -->
+    <section id="roadmap" class="py-28 bg-emerald-400 text-slate-950">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-semibold text-center tracking-[-1px] mb-16">2026 Roadmap</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="sharp-card bg-white/90 p-8">
+                    <h4 class="font-mono text-sm mb-2">STAGE 01</h4>
+                    <h3 class="text-2xl font-semibold">Foundation &amp; Data Ingestion</h3>
+                </div>
+                <div class="sharp-card bg-white/90 p-8">
+                    <h4 class="font-mono text-sm mb-2">STAGE 02</h4>
+                    <h3 class="text-2xl font-semibold">Pilot &amp; Trust-Building</h3>
+                </div>
+                <div class="sharp-card bg-white/90 p-8">
+                    <h4 class="font-mono text-sm mb-2">STAGE 03</h4>
+                    <h3 class="text-2xl font-semibold">National Expansion</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section id="founder" class="max-w-screen-2xl mx-auto px-6 py-28">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="heading-font text-5xl font-semibold tracking-[-1px]">Abdulganiyu Sani Is</h2>
+            <p class="text-emerald-400 mt-4">Founder • Kaduna State Development and Property Limited</p>
+            <a href="mailto:abdulganiyu.sani@sabajcore.xyz" class="mt-8 inline-block text-lg">abdulganiyu.sani@sabajcore.xyz</a>
+        </div>
+    </section>
 
     <!-- WAITLIST MODAL -->
     <div id="waitlist-modal" onclick="if(event.target.id==='waitlist-modal')hideWaitlistModal()" 
          class="hidden fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center px-4">
         <div onclick="event.stopImmediatePropagation()" class="sharp-card max-w-md w-full p-10 relative">
-            <button onclick="hideWaitlistModal()" 
-                    class="absolute top-6 right-6 text-3xl text-slate-400 hover:text-white">✕</button>
+            <button onclick="hideWaitlistModal()" class="absolute top-6 right-6 text-3xl text-slate-400 hover:text-white">✕</button>
             
             <h3 class="text-3xl font-semibold mb-3">Join the Waitlist</h3>
-            <p class="text-slate-400 mb-10">Early access • Pilot opportunities • Product updates</p>
+            <p class="text-slate-400 mb-10">Early access • Pilot opportunities</p>
             
             <form onsubmit="handleWaitlistSubmit(event)" class="space-y-6">
-                <input type="text" id="name" placeholder="Full Name" required class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5 focus:border-emerald-400">
-                <input type="email" id="email" value="abdulganiyu.sani@sabajcore.xyz" required class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5 focus:border-emerald-400">
+                <input type="text" id="name" placeholder="Full Name" required class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5">
+                <input type="email" id="email" value="abdulganiyu.sani@sabajcore.xyz" required class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5">
                 <button type="submit" class="neon-button w-full py-7 bg-gradient-to-r from-emerald-400 to-cyan-300 text-slate-950 font-semibold rounded-2xl text-lg">SECURE EARLY ACCESS</button>
             </form>
         </div>
