@@ -1,0 +1,28 @@
+<svg fill="none" viewBox="0 0 280 80" height="80" width="280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="logoGradient">
+      <stop stop-color="#10b981" offset="0%"></stop>
+      <stop stop-color="#34d399" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  
+  
+  <rect fill="#10b981" ry="12" rx="12" height="54" width="54" y="12" x="8"></rect>
+  
+  
+  <text text-anchor="middle" fill="#ffffff" font-weight="700" font-size="42" font-family="'Space Grotesk', sans-serif" y="47" x="35">S</text>
+  
+  
+  <circle fill="#ffffff" r="3.5" cy="24" cx="18"></circle>
+  <circle fill="#ffffff" r="3.5" cy="24" cx="27"></circle>
+  <circle fill="#ffffff" r="3.5" cy="24" cx="36"></circle>
+  
+  
+  <text letter-spacing="-2.5px" fill="#ffffff" font-weight="700" font-size="38" font-family="'Space Grotesk', sans-serif" y="49" x="72">SABAJ</text>
+  
+  
+  <text letter-spacing="-2.5px" fill="#10b981" font-weight="700" font-size="38" font-family="'Space Grotesk', sans-serif" y="49" x="192">CORE</text>
+  
+  
+  <rect opacity="0.3" fill="#10b981" height="1.5" width="158" y="65" x="72"></rect>
+</svg>
