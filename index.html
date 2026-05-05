@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SabajCore — Next-Generation PropTech Infrastructure for Nigeria. Blockchain land titles in seconds, GIS intelligence, and automated property management.">
-    <meta property="og:title" content="SabajCore | The Core of Nigerian Real Estate">
-    <meta property="og:description" content="Instant title verification. GIS-powered urban intelligence. Automated property flows.">
+    <meta name="description" content="SabajCore — Next-Generation PropTech Infrastructure & Urban Development for Nigeria. Blockchain-based Smart-Title Verification, GIS Intelligence Dashboard, and Property Management SaaS.">
+    <meta property="og:title" content="SabajCore | Next-Gen PropTech for Nigeria">
+    <meta property="og:description" content="Digitizing land titles with blockchain, powering data-driven urban development with GIS, and automating property operations across Nigeria.">
+    <meta property="og:image" content="https://sabajcore.xyz/og-image.jpg">
 
     <title>SabajCore | Next-Gen PropTech for Nigeria</title>
     
@@ -23,8 +24,8 @@
         
         * { 
             transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow; 
-            transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1); 
-            transition-duration: 200ms; 
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+            transition-duration: 180ms; 
         }
         
         .tailwind-ready { font-family: 'Inter', system_ui, sans-serif; }
@@ -41,11 +42,12 @@
             position: absolute;
             inset: 0;
             background-image: 
-                linear-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
-            background-size: 60px 60px;
+                linear-gradient(rgba(16, 185, 129, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.07) 1px, transparent 1px);
+            background-size: 70px 70px;
             pointer-events: none;
             z-index: 1;
+            opacity: 0.6;
         }
 
         .nav-link { position: relative; }
@@ -60,10 +62,11 @@
         }
         .nav-link:hover:after { width: 100%; }
 
-        .glass-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(16, 185, 129, 0.2);
+        .sharp-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 12px; /* Sharper edges */
         }
 
         .neon-button {
@@ -77,34 +80,47 @@
             left: -50%;
             width: 40%;
             height: 200%;
-            background: linear-gradient(transparent, rgba(255,255,255,0.4), transparent);
+            background: linear-gradient(transparent, rgba(255,255,255,0.35), transparent);
             transform: skewX(-25deg);
-            transition: left 0.6s;
+            transition: left 0.7s;
         }
         .neon-button:hover::after { left: 150%; }
+
+        .section-header {
+            position: relative;
+        }
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 64px;
+            height: 3px;
+            background: linear-gradient(to right, #10b981, #22d3ee);
+            bottom: -8px;
+            left: 0;
+        }
     </style>
 </head>
 <body class="tailwind-ready bg-slate-950 text-white overflow-x-hidden">
 
     <!-- NAVBAR -->
-    <nav class="bg-slate-950/80 backdrop-blur-xl border-b border-slate-800 sticky top-0 z-50">
-        <div class="max-w-screen-2xl mx-auto px-5">
+    <nav class="bg-slate-950/90 backdrop-blur-xl border-b border-slate-700 sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-6">
             <div class="flex justify-between items-center py-5">
                 <div class="flex items-center gap-x-3">
-                    <div class="w-9 h-9 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-2xl flex items-center justify-center text-slate-950 font-bold text-2xl shadow-lg shadow-emerald-500/50">S</div>
-                    <span class="heading-font text-3xl font-semibold tracking-[-1.5px]">SABAJ<span class="text-emerald-400">CORE</span></span>
+                    <div class="w-9 h-9 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-xl flex items-center justify-center text-slate-950 font-bold text-2xl shadow-inner">S</div>
+                    <span class="heading-font text-3xl font-semibold tracking-[-1px]">SABAJ<span class="text-emerald-400">CORE</span></span>
                 </div>
 
                 <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
                     <a href="#vision" onclick="smoothScrollTo('vision')" class="nav-link text-slate-300 hover:text-white">Vision</a>
                     <a href="#products" onclick="smoothScrollTo('products')" class="nav-link text-slate-300 hover:text-white">Products</a>
                     <a href="#technology" onclick="smoothScrollTo('technology')" class="nav-link text-slate-300 hover:text-white">Technology</a>
-                    <a href="#roadmap" onclick="smoothScrollTo('roadmap')" class="nav-link text-slate-300 hover:text-white">Roadmap</a>
+                    <a href="#roadmap" onclick="smoothScrollTo('roadmap')" class="nav-link text-slate-300 hover:text-white">Roadmap 2026</a>
                     <a href="#founder" onclick="smoothScrollTo('founder')" class="nav-link text-slate-300 hover:text-white">Founder</a>
                 </div>
 
                 <button onclick="showWaitlistModal()" 
-                        class="neon-button px-7 py-3 bg-emerald-400 hover:bg-cyan-400 text-slate-950 font-semibold rounded-3xl text-sm flex items-center gap-x-2 shadow-xl shadow-emerald-500/30">
+                        class="neon-button px-8 py-3.5 bg-emerald-400 hover:bg-cyan-400 text-slate-950 font-semibold rounded-2xl text-sm flex items-center gap-x-2">
                     JOIN WAITLIST
                     <i class="fas fa-arrow-right"></i>
                 </button>
@@ -114,12 +130,12 @@
 
     <!-- HERO -->
     <header class="hero-bg min-h-screen flex items-center relative">
-        <div class="max-w-screen-2xl mx-auto px-5 grid md:grid-cols-12 gap-12 items-center z-10">
+        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center z-10">
             <div class="md:col-span-7">
-                <div class="inline-flex items-center gap-x-2 bg-slate-900/80 border border-emerald-400/30 text-emerald-400 text-xs font-medium px-5 h-9 rounded-3xl mb-8 backdrop-blur">
-                    <span class="relative flex h-2.5 w-2.5">
+                <div class="inline-flex items-center gap-x-2 bg-slate-900 border border-emerald-400/30 text-emerald-400 text-xs font-medium px-5 h-9 rounded-2xl mb-8">
+                    <span class="relative flex h-3 w-3">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
                     </span>
                     NIGERIA'S FIRST PROPTECH INFRASTRUCTURE LAYER
                 </div>
@@ -128,32 +144,48 @@
                     The Core of<br><span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">Nigerian Real Estate</span>
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-slate-300 max-w-lg mb-10">
-                    Blockchain titles in seconds.<br>
-                    GIS-powered intelligence.<br>
-                    Automated property flows.
+                <p class="text-2xl text-slate-300 max-w-xl mb-10">
+                    SabajCore is the technological backbone of Nigeria’s property sector. 
+                    We digitize administrative bottlenecks and bring full transparency using decentralized ledger technology.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
                     <button onclick="showWaitlistModal()" 
-                            class="neon-button w-full sm:w-auto px-10 py-6 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-950 font-semibold rounded-3xl flex items-center justify-center gap-x-3 text-lg shadow-2xl shadow-emerald-500/40">
-                        ACCESS THE LEDGER
+                            class="neon-button w-full sm:w-auto px-10 py-6 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-950 font-semibold rounded-2xl flex items-center justify-center gap-x-3 text-lg">
+                        BE FIRST TO ACCESS THE LEDGER
                         <i class="fas fa-rocket"></i>
                     </button>
                     
                     <a href="#products" onclick="smoothScrollTo('products')" 
-                       class="w-full sm:w-auto px-10 py-6 border border-white/30 hover:border-white/70 text-white font-medium rounded-3xl flex items-center justify-center gap-x-3 text-lg">
-                        Explore Products ↓
+                       class="w-full sm:w-auto px-10 py-6 border border-white/40 hover:border-white text-white font-medium rounded-2xl flex items-center justify-center gap-x-3 text-lg">
+                        EXPLORE THE FULL SUITE ↓
                     </a>
+                </div>
+
+                <div class="mt-12 flex items-center gap-x-8">
+                    <div class="flex items-center gap-x-1 text-emerald-400">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="font-mono text-4xl font-semibold">3–6 months</span>
+                    </div>
+                    <div class="text-slate-400">→</div>
+                    <div class="font-mono text-4xl font-semibold text-cyan-400">2 seconds</div>
+                    <div class="text-xs text-slate-400 max-w-[180px]">Title verification time reduced forever</div>
                 </div>
             </div>
 
             <div class="md:col-span-5">
-                <div class="glass-card rounded-3xl p-8 shadow-2xl">
-                    <div class="text-center">
-                        <i class="fas fa-cube text-7xl text-emerald-400 mb-6 drop-shadow-[0_0_30px_rgb(16,185,129)]"></i>
-                        <h3 class="text-2xl font-semibold mb-2">The Ledger • Pilot Live</h3>
-                        <p class="text-emerald-400 font-mono text-sm tracking-widest">ON-CHAIN • VERIFIED • SECURE</p>
+                <div class="sharp-card p-8">
+                    <div class="bg-[#0a1729] rounded-2xl p-8 text-center border border-emerald-400/30">
+                        <i class="fas fa-cube text-7xl text-emerald-400 mb-6 drop-shadow-[0_0_25px_#10b981]"></i>
+                        <h3 class="text-3xl font-semibold mb-3">The Ledger is LIVE in pilot</h3>
+                        <p class="text-emerald-400 font-mono tracking-[1px]">ON-CHAIN • VERIFIED • SECURE</p>
+                        <div class="mt-8 bg-slate-950 border border-emerald-400/30 rounded-2xl p-6 text-left text-sm">
+                            LAND TITLE #NG-KD-8743921<br>
+                            <span class="text-emerald-400">VERIFIED ✓</span><br>
+                            Owner: Adebayo Family Trust<br>
+                            Location: Kaduna South • 1.8 acres<br>
+                            Last transfer: 12 Mar 2026 • No liens
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,68 +193,184 @@
     </header>
 
     <!-- VISION -->
-    <section id="vision" class="max-w-screen-2xl mx-auto px-5 py-24">
-        <div class="grid md:grid-cols-12 gap-12 items-center">
+    <section id="vision" class="max-w-screen-2xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-12 gap-16">
             <div class="md:col-span-5">
-                <h2 class="heading-font text-5xl font-semibold tracking-tight leading-none">Nigeria’s land system is broken.<br>We are building the fix.</h2>
+                <span class="px-5 py-2 bg-emerald-400 text-slate-950 text-sm font-semibold rounded-2xl">VISION OVERVIEW</span>
+                <h2 class="heading-font text-5xl font-semibold tracking-[-1px] mt-6 leading-none">SabajCore is positioned to be the technological “core” of the Nigerian real estate and property development sector.</h2>
             </div>
-            <div class="md:col-span-7 text-lg text-slate-300">
-                <p class="mb-6">Digitizing land records with blockchain transparency and GIS intelligence to eliminate fraud and accelerate development across Nigeria.</p>
+            <div class="md:col-span-7 text-xl text-slate-300 leading-relaxed">
+                <p class="mb-8">By digitizing administrative bottlenecks and introducing transparency through decentralized ledger technology, SabajCore solves the trust deficit in land ownership and urban planning that has plagued the sector for decades.</p>
+                <p>We eliminate fraudulent multiple-sales, reduce title verification from 3–6 months to seconds, and give developers real-time, data-driven insights into where to build next.</p>
             </div>
         </div>
     </section>
 
     <!-- PRODUCTS -->
     <section id="products" class="bg-slate-900 py-24">
-        <div class="max-w-screen-2xl mx-auto px-5">
-            <h2 class="heading-font text-5xl font-semibold tracking-tight text-center mb-16">The SabajCore Suite</h2>
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-slate-800 text-emerald-400 text-sm font-semibold rounded-2xl">PRODUCT SUITE</span>
+                <h2 class="heading-font text-5xl font-semibold tracking-[-1px] mt-4">Three pillars. One unbreakable core.</h2>
+            </div>
+            
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card rounded-3xl p-8 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/20 group">
-                    <div class="text-5xl mb-6">🔗</div>
+                <!-- The Ledger -->
+                <div class="sharp-card p-8 hover:border-emerald-400">
+                    <div class="text-6xl mb-6">📜</div>
                     <h3 class="text-3xl font-semibold mb-2">The Ledger</h3>
-                    <p class="text-emerald-400 mb-4">Smart Title Verification</p>
-                    <p class="text-slate-400">Instant blockchain-powered title checks. Eliminate multiple sales fraud forever.</p>
+                    <p class="text-emerald-400 text-xl mb-6">Smart-Title Verification</p>
+                    <p class="text-slate-400 leading-relaxed">A blockchain-based verification system that allows users to instantly check the status, history, and authenticity of land titles. This reduces the traditional 3-6 month verification window to mere seconds, protecting buyers from fraudulent multiple-sales once and for all.</p>
+                    <div class="mt-8 pt-8 border-t border-slate-700 text-xs flex justify-between items-center">
+                        <span class="font-mono">Hyperledger • AWS Textract OCR</span>
+                        <span class="text-emerald-400">MVP LIVE 2026</span>
+                    </div>
                 </div>
-                <div class="glass-card rounded-3xl p-8 hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 group">
-                    <div class="text-5xl mb-6">🗺️</div>
+
+                <!-- The Map -->
+                <div class="sharp-card p-8 hover:border-cyan-400">
+                    <div class="text-6xl mb-6">🗺️</div>
                     <h3 class="text-3xl font-semibold mb-2">The Map</h3>
-                    <p class="text-emerald-400 mb-4">GIS Intelligence Dashboard</p>
-                    <p class="text-slate-400">Real-time zoning, infrastructure &amp; urban growth analytics.</p>
+                    <p class="text-emerald-400 text-xl mb-6">GIS Intelligence Dashboard</p>
+                    <p class="text-slate-400 leading-relaxed">A high-resolution spatial data platform providing deep insights into urban growth patterns, zoning regulations, and infrastructure proximity. Developers can now make truly data-driven decisions on where to build next across Nigeria.</p>
+                    <div class="mt-8 pt-8 border-t border-slate-700 text-xs flex justify-between items-center">
+                        <span class="font-mono">Mapbox GL JS • PostGIS</span>
+                        <span class="text-cyan-400">SCALING NATIONWIDE</span>
+                    </div>
                 </div>
-                <div class="glass-card rounded-3xl p-8 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/20 group">
-                    <div class="text-5xl mb-6">💸</div>
+
+                <!-- The Flow -->
+                <div class="sharp-card p-8 hover:border-emerald-400">
+                    <div class="text-6xl mb-6">💸</div>
                     <h3 class="text-3xl font-semibold mb-2">The Flow</h3>
-                    <p class="text-emerald-400 mb-4">Property Management SaaS</p>
-                    <p class="text-slate-400">Automated rent collection, service charges &amp; tenant portal.</p>
+                    <p class="text-emerald-400 text-xl mb-6">Property Management SaaS</p>
+                    <p class="text-slate-400 leading-relaxed">An end-to-end automated system for rent collection, service charge management, and tenant communications — specifically tailored for Nigeria’s regulatory and financial landscape.</p>
+                    <div class="mt-8 pt-8 border-t border-slate-700 text-xs flex justify-between items-center">
+                        <span class="font-mono">FastAPI • Flutter • React.js</span>
+                        <span class="text-emerald-400">PRIVATE ESTATES PILOT</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- TECHNOLOGY -->
-    <section id="technology" class="max-w-screen-2xl mx-auto px-5 py-24">
-        <h2 class="heading-font text-5xl font-semibold tracking-tight text-center mb-16">Built for Scale &amp; Trust</h2>
+    <section id="technology" class="max-w-screen-2xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <span class="px-5 py-2 bg-slate-800 text-emerald-400 text-sm font-semibold rounded-2xl">TECHNOLOGY ARCHITECTURE</span>
+            <h2 class="heading-font text-5xl font-semibold tracking-[-1px] mt-4">Industrial-grade stack built for Nigeria’s reality</h2>
+        </div>
+        
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <div class="glass-card p-6 rounded-3xl text-center">Python • FastAPI</div>
-            <div class="glass-card p-6 rounded-3xl text-center">PostgreSQL + PostGIS</div>
-            <div class="glass-card p-6 rounded-3xl text-center">Redis</div>
-            <div class="glass-card p-6 rounded-3xl text-center border border-emerald-400">Hyperledger Fabric</div>
-            <div class="glass-card p-6 rounded-3xl text-center">AWS Textract OCR</div>
-            <div class="glass-card p-6 rounded-3xl text-center">Flutter + Mapbox</div>
+            <div class="sharp-card p-8 text-center">Python / FastAPI</div>
+            <div class="sharp-card p-8 text-center">PostgreSQL + PostGIS</div>
+            <div class="sharp-card p-8 text-center">Redis (Caching)</div>
+            <div class="sharp-card p-8 text-center border-2 border-emerald-400">Hyperledger (Blockchain)</div>
+            <div class="sharp-card p-8 text-center">AWS Textract (OCR)</div>
+            <div class="sharp-card p-8 text-center">Mapbox GL JS</div>
+            <div class="sharp-card p-8 text-center col-span-2 md:col-span-1 lg:col-span-2">Flutter (Mobile) + React.js (Web Admin)</div>
         </div>
     </section>
 
-    <!-- ROADMAP + FOUNDER + MODAL (same as before, shortened for brevity) -->
-    <!-- ... (I can send the full remaining sections if needed) -->
+    <!-- ROADMAP -->
+    <section id="roadmap" class="bg-emerald-400 text-slate-950 py-24">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-semibold tracking-[-1px] text-center mb-16">2026 Development Roadmap</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="sharp-card bg-white/90 p-8">
+                    <div class="font-mono text-emerald-400 text-sm mb-2">STAGE 01 • Q1-Q2 2026</div>
+                    <h3 class="text-3xl font-semibold mb-6">Foundation &amp; Data Ingestion</h3>
+                    <ul class="space-y-4 text-slate-700">
+                        <li class="flex gap-3"><i class="fas fa-check mt-1"></i> Secure database architecture</li>
+                        <li class="flex gap-3"><i class="fas fa-check mt-1"></i> AI-powered OCR digitization of physical land records</li>
+                        <li class="flex gap-3"><i class="fas fa-check mt-1"></i> Strategic data-sharing alliances with regional property bureaus</li>
+                    </ul>
+                </div>
+                
+                <div class="sharp-card bg-white/90 p-8 relative">
+                    <div class="absolute top-8 right-8 text-xs font-bold bg-emerald-400 text-slate-950 px-4 py-1 rounded-2xl">PILOT PHASE</div>
+                    <div class="font-mono text-emerald-400 text-sm mb-2">STAGE 02 • Q3 2026</div>
+                    <h3 class="text-3xl font-semibold mb-6">Pilot &amp; Trust-Building</h3>
+                    <ul class="space-y-4 text-slate-700">
+                        <li class="flex gap-3"><i class="fas fa-check mt-1"></i> Smart-Title Verification MVP in controlled metropolitan area</li>
+                        <li class="flex gap-3"><i class="fas fa-check mt-1"></i> Onboarding private estate developers for The Flow SaaS</li>
+                    </ul>
+                </div>
+                
+                <div class="sharp-card bg-white/90 p-8">
+                    <div class="font-mono text-emerald-400 text-sm mb-2">STAGE 03 • Q4 2026</div>
+                    <h3 class="text-3xl font-semibold mb-6">Integration &amp; National Expansion</h3>
+                    <ul class="space-y-4 text-slate-700">
+                        <li class="flex gap-3"><i class="fas fa-check mt-1"></i> Scale GIS engine to all major states</li>
+                        <li class="flex gap-3"><i class="fas fa-check mt-1"></i> Payment gateway integration for automated revenue collection</li>
+                        <li class="flex gap-3"><i class="fas fa-check mt-1"></i> Full public rollout of investment &amp; fractional ownership module</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section id="founder" class="max-w-screen-2xl mx-auto px-6 py-24">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="mx-auto w-24 h-24 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-2xl flex items-center justify-center text-6xl mb-8">👷‍♂️</div>
+            <h2 class="heading-font text-5xl font-semibold tracking-[-1px]">Abdulganiyu Sani Is</h2>
+            <p class="text-emerald-400 mt-3 text-xl">Founder &amp; CEO</p>
+            <p class="mt-2 text-slate-400">Kaduna State Development and Property Limited</p>
+            
+            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="https://www.linkedin.com/in/abdulganiyu-sani" target="_blank" 
+                   class="flex items-center justify-center gap-x-3 border border-slate-300 hover:border-emerald-400 px-8 py-5 rounded-2xl">
+                    <i class="fab fa-linkedin text-3xl"></i>
+                    <div class="text-left">
+                        <div class="font-semibold">Connect on LinkedIn</div>
+                        <div class="text-xs text-slate-400">Abdulganiyu Sani Is</div>
+                    </div>
+                </a>
+                <a href="mailto:abdulganiyu.sani@sabajcore.xyz" 
+                   class="flex-1 sm:flex-none flex items-center justify-center gap-x-3 bg-emerald-400 text-slate-950 px-8 py-5 rounded-2xl font-semibold">
+                    <i class="fas fa-envelope"></i>
+                    abdulganiyu.sani@sabajcore.xyz
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-950 py-20 text-center">
+        <h2 class="heading-font text-5xl font-semibold tracking-[-1px] max-w-2xl mx-auto">The future of property in Nigeria starts here.</h2>
+        <button onclick="showWaitlistModal()" class="mt-10 px-16 py-7 text-2xl font-semibold bg-slate-950 text-white rounded-2xl flex items-center gap-x-4 mx-auto">
+            JOIN THE WAITLIST NOW
+            <i class="fas fa-arrow-right text-3xl"></i>
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-700 py-16">
+        <div class="max-w-screen-2xl mx-auto px-6 text-slate-400 text-sm">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>© 2026 SabajCore. All Rights Reserved.</div>
+                <div class="flex gap-x-8">
+                    <a href="mailto:abdulganiyu.sani@sabajcore.xyz">Contact Founder</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="https://sabajcore.xyz">sabajcore.xyz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- WAITLIST MODAL -->
-    <div id="waitlist-modal" class="hidden fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center px-4">
-        <div class="glass-card rounded-3xl max-w-md w-full p-10" onclick="event.stopImmediatePropagation()">
-            <h3 class="text-3xl font-semibold mb-8">Join the Revolution</h3>
-            <form onsubmit="handleWaitlistSubmit(event)">
-                <input type="text" id="name" placeholder="Full Name" required class="w-full mb-4 bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5">
-                <input type="email" id="email" value="abdulganiyu.sani@sabajcore.xyz" required class="w-full mb-8 bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5">
-                <button type="submit" class="neon-button w-full py-6 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-950 font-semibold rounded-3xl text-lg">SECURE EARLY ACCESS</button>
+    <div id="waitlist-modal" onclick="if(event.target.id==='waitlist-modal')hideWaitlistModal()" 
+         class="hidden fixed inset-0 bg-black/80 z-[9999] flex items-center justify-center px-4">
+        <div onclick="event.stopImmediatePropagation()" class="sharp-card max-w-md w-full p-10">
+            <h3 class="text-3xl font-semibold mb-2">Join the SabajCore Revolution</h3>
+            <p class="text-slate-400 mb-8">Early access • Pilot invites • Product updates</p>
+            
+            <form onsubmit="handleWaitlistSubmit(event)" class="space-y-6">
+                <input type="text" id="name" placeholder="Full Name" required class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5">
+                <input type="email" id="email" value="abdulganiyu.sani@sabajcore.xyz" required class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-5">
+                <button type="submit" class="neon-button w-full py-6 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-950 font-semibold rounded-2xl text-xl">SECURE MY EARLY ACCESS</button>
             </form>
         </div>
     </div>
@@ -234,10 +382,13 @@
         function showWaitlistModal() {
             document.getElementById('waitlist-modal').classList.remove('hidden');
         }
+        function hideWaitlistModal() {
+            document.getElementById('waitlist-modal').classList.add('hidden');
+        }
         function handleWaitlistSubmit(e) {
             e.preventDefault();
-            document.getElementById('waitlist-modal').classList.add('hidden');
-            alert("✅ Thank you! You've been added to the SabajCore priority list.");
+            hideWaitlistModal();
+            alert("✅ Thank you! You are now on the SabajCore priority waitlist.");
         }
     </script>
 </body>
